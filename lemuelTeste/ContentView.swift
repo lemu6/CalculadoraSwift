@@ -13,12 +13,43 @@ struct ContentView: View {
     
     var body: some View {
         VStack (alignment: .trailing, spacing: 0){
+            Spacer()
             HStack{
                 Text(result)
                     .padding()
                     .font(.largeTitle)
                     .foregroundColor(Color.white)
             }
+            
+            HStack {
+                Button("AC") {
+                    
+                    
+                }.padding()
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                
+                
+                Button("+/-") {
+                    
+                }.padding()
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                
+                
+                Button("%") {
+                    
+                }.padding()
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+              
+                
+                Button("/") {
+                    
+                }.padding(.vertical, 40)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                .background(Color.orange)
+                
+                    
+            }.foregroundColor(Color.white)
+            
             HStack {
                 Button("7") {
                     
@@ -80,19 +111,21 @@ struct ContentView: View {
             
             HStack {
                 Button("1") {
-                    
+                    result += "1"
                     
                 }.padding()
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                 
                 
                 Button("2") {
+                    result += "2"
                     
                 }.padding()
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                 
                 
                 Button("3") {
+                    result += "3"
                     
                 }.padding()
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
@@ -134,9 +167,8 @@ struct ContentView: View {
             }.frame(maxHeight: 92)
             
         }
-        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
         .background(Color.black)
-        .padding()
     }
 }
 
