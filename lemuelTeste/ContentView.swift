@@ -13,12 +13,17 @@ struct ContentView: View {
     
     var body: some View {
         VStack (alignment: .trailing, spacing: 0){
+            Text("\(result.count)")
+                .foregroundColor(Color.red)
             Spacer()
             HStack{
                 Text(result)
                     .padding()
-                    .font(.largeTitle)
+                    .lineLimit(1)
+                    .font(.system(size: CGFloat ( 80 / Int((Double(result.count + 10) / 10.0)))))
                     .foregroundColor(Color.white)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical: false)
             }
             
             HStack {
