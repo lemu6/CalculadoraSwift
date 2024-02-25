@@ -13,14 +13,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack (alignment: .trailing, spacing: 0){
-            Text("\(result.count)")
+            Text("\(String)(result).count)")
                 .foregroundColor(Color.red)
             Spacer()
             HStack{
-                Text(result)
+                Text(String(result))
                     .padding()
                     .lineLimit(1)
-                    .font(.system(size: CGFloat ( 80 / Int((Double(result.count + 10) / 10.0)))))
+                    .font(.system(size: CGFloat ( 80 / Int((Double(String(result.count + 10) / 8.0))))))
                     .foregroundColor(Color.white)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical: false)
@@ -28,7 +28,7 @@ struct ContentView: View {
             
             HStack {
                 Button("AC") {
-                    
+                    result = 0
                     
                 }.padding()
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
@@ -116,14 +116,14 @@ struct ContentView: View {
             
             HStack {
                 Button("1") {
-                    result += "1"
+                    result = (result * 10) + 1
                     
                 }.padding()
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                 
                 
                 Button("2") {
-                    result += "2"
+                    result += (result * 10) + 2
                     
                 }.padding()
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
